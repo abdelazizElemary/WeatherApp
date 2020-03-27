@@ -1,0 +1,74 @@
+body {
+    background-color: #f0ebeb;
+    color: #333333;
+    font-family: arial;
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 650px;
+    min-height: 100vh;
+    text-align: justify;
+    text-align: center;
+    /* this to enable using flex box to make the footer fixed at the bottom*/
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content p {
+    color: #494949;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.main-content {
+    margin-top: 16px;
+    flex-grow: 1;
+}
+
+footer {
+    color: #888888;
+    border-top: 1px solid #d8d1d1;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #d8d1d1;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+div a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+header a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.portrait {
+    width: 250px;
+    margin-bottom: 16px;
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    background: #888888;
+    color: white;
+    padding: 8px;
+}

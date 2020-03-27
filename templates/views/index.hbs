@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+
+<body>
+    {{>header}}
+
+    <div class="main-content">
+        <h1 style="font-size: 30px;">Find out the forecast in your country</h1>
+
+        <form>
+            <input placeholder="Location">
+            <button>Search</button>
+        </form>
+
+        <p id="error"></p>
+        <p id="data"></p>
+
+    </div>
+
+    {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
