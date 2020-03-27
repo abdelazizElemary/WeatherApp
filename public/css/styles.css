@@ -20,7 +20,6 @@ body {
 }
 
 .main-content {
-    margin-top: 16px;
     flex-grow: 1;
 }
 
@@ -34,7 +33,6 @@ footer {
 header {
     margin-top: 16px;
     margin-bottom: 48px;
-    padding-bottom: 16px;
     border-bottom: 1px solid #d8d1d1;
 }
 
