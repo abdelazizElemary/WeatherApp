@@ -14,7 +14,10 @@ body {
 }
 
 #error,
-#data {
+#summary,
+#temperature,
+#rain,
+#lowhigh {
     text-align: left;
 }
 
