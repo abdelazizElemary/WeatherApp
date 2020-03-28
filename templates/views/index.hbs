@@ -6,6 +6,10 @@
     <link rel="icon" href="/img/weather.png">
     <link rel="stylesheet" href="/css/styles.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/flick/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
 </head>
 
 <body>
@@ -14,8 +18,9 @@
     <div class="main-content">
         <h1 style="font-size: 30px;">Find out the forecast in your country</h1>
 
-        <form>
-            <input placeholder="Location">
+        <form action="" method="post" name="form_citydetails" id="form_citydetails" enctype="multipart/form-data"
+            onsubmit="return false;">
+            <input class="ff_elem" type="text" name="ff_nm_from[]" value="" id="f_elem_city" placeholder="Location" />
             <button>Search</button>
         </form>
 
