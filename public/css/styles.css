@@ -27,6 +27,10 @@ body {
     margin-bottom: 10px;
 }
 
+.result {
+    margin-top: 50px;
+}
+
 .main-content {
     flex-grow: 1;
 }

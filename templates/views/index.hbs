@@ -4,31 +4,43 @@
 <head>
     <title>Home</title>
     <link rel="icon" href="/img/weather.png">
-    <link rel="stylesheet" href="/css/styles.css">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/flick/jquery-ui.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
     {{>header}}
 
     <div class="main-content">
+
         <h1 style="font-size: 30px;">Find out the forecast in your country</h1>
 
-        <form action="" method="post" name="form_citydetails" id="form_citydetails" enctype="multipart/form-data"
-            onsubmit="return false;">
-            <input class="ff_elem" type="text" name="ff_nm_from[]" value="" id="f_elem_city" placeholder="Location" />
-            <button>Search</button>
+        <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="f_elem_city" class="sr-only">Location</label>
+                <input type="text" class="form-control" name="ff_nm_from[]" id="f_elem_city" placeholder="Location">
+            </div>
+            <button type="submit" class="btn btn-secondary mb-2">Search</button>
         </form>
 
-        <p id="error"></p>
-        <p id="summary"></p>
-        <p id="temperature"></p>
-        <p id="lowhigh"></p>
-        <p id="rain"></p>
+        <small id="locationHelp" class="form-text text-muted">enter the name or zip code of your city.</small>
+
+        <div class="result">
+            <p id="error"></p>
+            <p id="summary"></p>
+            <p id="temperature"></p>
+            <p id="lowhigh"></p>
+            <p id="rain"></p>
+
+        </div>
 
     </div>
 
