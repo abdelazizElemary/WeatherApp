@@ -1611,7 +1611,7 @@ form input[type="reset"] {
     background: #323544;
     display: table;
     table-layout: fixed;
-    width: 50%;
+    width: 100%;
     overflow: hidden;
     border-radius: 10px;
     margin-top: -150px;
