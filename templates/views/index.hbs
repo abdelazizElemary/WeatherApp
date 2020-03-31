@@ -2,50 +2,121 @@
 <html>
 
 <head>
-    <title>Home</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+
+    <title>Weather Forecast</title>
     <link rel="icon" href="/img/weather.png">
 
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
+    <!-- Loading third party for autocomplete -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/flick/jquery-ui.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Loading third party fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+    <link href="/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Loading main css file -->
+    <link rel="stylesheet" href="/css/style.css">
+
 </head>
 
 <body>
+
     {{>header}}
 
-    <div class="main-content">
+    <div style="flex-grow: 1;" class="site-content">
 
-        <h1 style="font-size: 30px;">Find out the forecast in your country</h1>
-
-        <form class="form-inline">
-            <div class="form-group mx-sm-3 mb-2">
-                <label for="f_elem_city" class="sr-only">Location</label>
-                <input type="text" class="form-control" name="ff_nm_from[]" id="f_elem_city" placeholder="Location">
+        <div class="hero" data-bg-image="images/banner.png">
+            <div class="container">
+                <form class="find-location">
+                    <input type="text" name="ff_nm_from[]" id="f_elem_city" placeholder="Find your location...">
+                    <input type="submit" value="Find">
+                </form>
             </div>
-            <button type="submit" class="btn btn-secondary mb-2">Search</button>
-        </form>
+        </div>
 
-        <small id="locationHelp" class="form-text text-muted">enter the name or zip code of your city.</small>
+        <div class="forecast-table">
+            <div id="forecastResult" class="container">
+                <div class="forecast-container">
+                    <div class="today forecast">
+                        <div class="forecast-header">
+                            <div style="font-size: large;" id="day" class="day"></div>
+                            <div style="font-size: large;" id="date" class="date"></div>
+                        </div>
+                        <!-- .forecast-header -->
+                        <div class="forecast-content">
+                            <div class="location" id="location"></div>
+                            <div class="degree">
+                                <div class="num"></div>
+                                <div class="forecast-icon">
+                                    <img src="images/icons/icon-1.svg" alt="" width=90>
+                                </div>
+                            </div>
 
-        <div class="result">
-            <p id="error"></p>
-            <p id="summary"></p>
-            <p id="temperature"></p>
-            <p id="lowhigh"></p>
-            <p id="rain"></p>
+                            <span id="rainingDegree"></span>
+                            <span id="windSpeed"></span>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="container">
+                <p style="font-size: 24px;" id="error"></p>
+            </div>
 
         </div>
+
+        <main class="main-content">
+            <div id="description" class="fullwidth-block" hidden="true">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="live-camera">
+                                <h2 class="location" id="summary"></h2>
+                                <figure style="top: 70px;" class="live-camera-cover"><img style="width: 120px;"
+                                        src="images/check.png" alt=""></figure>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="live-camera">
+                                <h2 class="location" id="temperature"></h2>
+                                <figure style="top: 70px;" class="live-camera-cover"><img style="width: 120px;"
+                                        src="images/check.png" alt=""></figure>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="live-camera">
+                                <h2 class="location" id="lowhigh"></h2>
+                                <figure style="top: 50px;" class="live-camera-cover"><img style="width: 120px;"
+                                        src="images/check.png" alt=""></figure>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="live-camera">
+                                <h2 class="location" id="rain"></h2>
+                                <figure style="top: 70px;" class="live-camera-cover"><img style="width: 120px;"
+                                        src="images/check.png" alt=""></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
 
     </div>
 
     {{>footer}}
+
     <script src="/js/app.js"></script>
+    <script src="/js/plugins.js"></script>
+
 </body>
 
 </html>

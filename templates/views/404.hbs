@@ -2,18 +2,57 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+
     <title>Error</title>
     <link rel="icon" href="/img/weather.png">
-    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Loading third party for autocomplete -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/flick/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+    <!-- Loading third party fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+    <link href="/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Loading main css file -->
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
     {{>header}}
-    <div class="main-content">
-        <p>{{text}}</p>
-    </div>
+
+    <main style="flex-grow: 1;" class="main-content">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span>{{title}}</span>
+            </div>
+        </div>
+
+        <div class="fullwidth-block">
+            <div class="container">
+                <div class="row">
+                    <div class="content col-md-8">
+                        <div class="post">
+                            <h2 class="entry-title">{{text}}</h2>
+                            <div style="font-size: 100px;">
+                                <a href="/"><i class="fa fa-home"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
 
     {{>footer}}
+
 </body>
 
 </html>

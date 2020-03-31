@@ -2,23 +2,62 @@
 <html>
 
 <head>
-    <title>About</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+
+    <title>Contact</title>
     <link rel="icon" href="/img/weather.png">
-    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Loading third party for autocomplete -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/flick/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+    <!-- Loading third party fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+    <link href="/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Loading main css file -->
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    {{>header}}
-    <div class="main-content">
-        <p>This site uses data from mapbox.com and darksky.net</p>
-        <img class="portrait" src="img/me.jpg">
-        <div>
-            <a href="https://www.linkedin.com/in/abdelaziz-elemary/">linkedin</a>
-            <a href="https://github.com/abdelazizElemary">github</a>
-        </div>
-    </div>
 
+    {{>header}}
+
+    <main style="flex-grow: 1;" class="main-content">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span>{{title}}</span>
+            </div>
+        </div>
+
+        <div class="fullwidth-block">
+            <div class="container">
+                <div class="row">
+                    <div class="content col-md-8">
+                        <div class="post">
+                            <h2 class="entry-title">This site uses data from mapbox.com and darksky.net</h2>
+                            <div class="featured-image"><img style="width: 270px;margin-bottom: 16px;"
+                                    src="images/me.jpg" alt=""></div>
+                            <div style="font-size: 100px;">
+                                <a style="margin-right: 46px;" href="https://www.linkedin.com/in/abdelaziz-elemary/"><i
+                                        class="fa fa-linkedin"></i></a>
+                                <a href="https://github.com/abdelazizElemary"><i class="fa fa-github"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+   
     {{>footer}}
+    
 </body>
 
 </html>

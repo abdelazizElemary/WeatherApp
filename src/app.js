@@ -22,21 +22,20 @@ app.use(express.static(publicDirectory))
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather Forecast',
-        name: 'Abdelaziz Elemary'
+        name: 'Abdelaziz Elemary',
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About me',
+        title: 'Contact',
         name: 'Abdelaziz Elemary'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'Help page',
+        title: 'Help',
         text: 'Follow my github repo and ask me if you need any help',
         name: 'Abdelaziz Elemary'
     })
@@ -56,16 +55,19 @@ app.get('/weather', (req, res) => {
             return res.send({ error })
         }
 
-        forecast(latitude, longitude, (error, { summary, temperature, lowhigh, rain } = {}) => {
+        forecast(latitude, longitude, (error, { windSpeed, rainingDegree, degree, summary, temperature, lowhigh, rain } = {}) => {
             if (error) {
                 return res.send({ error })
             }
             res.send({
                 summary,
+                degree,
                 location,
                 temperature,
                 lowhigh,
+                rainingDegree,
                 rain,
+                windSpeed,
                 address: req.query.address
             })
 
