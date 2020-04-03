@@ -14,7 +14,7 @@ const forecast = (latitude, longitude, callback) => {
                 degree: body.currently.temperature,
                 temperature: "It is currently " + body.currently.temperature + "°C out.",
                 lowhigh: "This high today is " + body.daily.data[0].temperatureHigh + "°C with a low of " + body.daily.data[0].temperatureLow + "°C.",
-                rain: body.currently.precipProbability + "% chance of rain",
+                rain: body.currently.precipProbability + "% chance of rain.",
                 rainingDegree: body.currently.precipProbability,
                 windSpeed: body.currently.windSpeed
             })
