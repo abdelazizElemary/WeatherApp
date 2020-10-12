@@ -8,4 +8,4 @@ A node.js application that takes user location and detect the forecast through i
 * Used javascript ES6 Aside object property destructuring and shorthand
 * Handled all the backend issues to make sure of the website reliability
 
-# Go to the website and have a look => https://abdelaziz-weather-application.herokuapp.com/
+# Go to the website and have a look => https://ae-forecast.herokuapp.com/
